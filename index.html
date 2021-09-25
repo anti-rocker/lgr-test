@@ -3,23 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <!-- Website Design By: www.happyworm.com -->
-<title>Demo : jPlayer with jQuery UI</title>
+<title>Demo : LGR player</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-
-<meta name="monetization" content="$ilp.uphold.com/3h66mKZLrgQZ" />
-<meta name="description" content="The CSS styleable jQuery media player plugin with HTML5 support!" />
-<meta name="keywords" content="jPlayer, jQuery, jQuery plugin, media, video, audio, media player, video player, audio player, mp3, mp4, m4a, m4v, aac, h264, ogg, oga, ogv, wav, webm" />
-<meta name="company" content="Happyworm" />
 <link href="/css/jPlayer.css" rel="stylesheet" type="text/css" />
-<link rel="shortcut icon" href="/graphics/jplayer.ico" type="image/x-icon" />
-<!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<!--[if IE 6]>
-<link href="/css/ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-<link href="/js/prettify/prettify-jPlayer.css" rel="stylesheet" type="text/css" />
+
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
@@ -75,7 +63,7 @@ $(document).ready(function(){
 					myControl.volume.slider("value", event.jPlayer.options.volume);
 				}
 			},
-			swfPath: "../dist/jplayer",
+			swfPath: "../jPlayer-2.9.2/dist/jplayer",
 			supplied: "mp3, m4a, oga",
 			cssSelectorAncestor: "#jp_container_1",
 			wmode: "window",
@@ -155,6 +143,7 @@ $(document).ready(function(){
 	margin-top: 200px;
 	width: 200px;
 	height: 200px;
+
 }
 .jp-gui.jp-no-volume {
 	width:432px;
@@ -191,6 +180,10 @@ li.jp-repeat-off,
 li.jp-unmute,
 .jp-no-solution {
 	display:none;
+	position: absolute;
+	left: 40px;
+	top: 20px;
+
 }
 .jp-progress-slider {
 	position:absolute;
@@ -263,22 +256,7 @@ font-family: courier;
 		t.parentNode.insertBefore(s, t);
 	})();
 </script>
-<!-- End Flattr -->
-<!-- Google Analytics -->
-<script type="text/javascript">
-	/* Google Analytics code for jPlayer.org */
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-3557377-9', 'jplayer.org');
-	ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-</head>
-<body class="demo" onload="prettyPrint();">
-<div id="container">
 
 <div class="text"> LOWER GRAND RADIO</div>
 
@@ -288,9 +266,9 @@ font-family: courier;
 		<div id="jp_container_1">
 			<div class="jp-gui ui-widget ui-widget-content ui-corner-all">
 				<ul>
-					<li class="jp-play ui-state-default ui-corner-all"><a href="javascript:;" class="jp-play ui-icon ui-icon-play" tabindex="1" title="play">play</a></li>
+					<li class="jp-play ui-state-default ui-corner-all"><a href="javascript:;" class="jp-play ui-icon ui-icon-play" tabindex="1" title="play"></a></li>
 					<li class="jp-pause ui-state-default ui-corner-all"><a href="javascript:;" class="jp-pause ui-icon ui-icon-pause" tabindex="1" title="pause">pause</a></li>
-
+					<li class="jp-play">
 
 					<li class="jp-mute ui-state-default ui-corner-all"><a href="javascript:;" class="jp-mute ui-icon ui-icon-volume-off" tabindex="1" title="mute">mute</a></li>
 					<li class="jp-unmute ui-state-default ui-state-active ui-corner-all"><a href="javascript:;" class="jp-unmute ui-icon ui-icon-volume-off" tabindex="1" title="unmute">unmute</a></li>
