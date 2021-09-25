@@ -2,20 +2,20 @@
 <html>
   <head>
     <link type="text/css" href="/dist/skin/pink.flag/css/jplayer.pink.flag.min.css" rel="stylesheet" />
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
     <script type="text/javascript">
   $(document).ready(function(){
     $("#jquery_jplayer_1").jPlayer({
       ready: function () {
         $(this).jPlayer("setMedia", {
           title: "LGR",
-          m4a: "lgr.out.airtime.pro:8000/lgr_a",
+          mp3: "https://lgr.out.airtime.pro:8000/lgr_a",
         });
       },
       cssSelectorAncestor: "#jp_container_1",
       swfPath: "/js",
-      supplied: "m4a, oga",
+      supplied: "mp3, oga",
       useStateClassSkin: true,
       autoBlur: false,
       smoothPlayBar: true,
